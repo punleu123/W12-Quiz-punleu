@@ -47,14 +47,13 @@ class _NewItemState extends State<NewItem> {
   void onAdd() {
     // Will be implemented later - Create and return the new grocery
     Grocery newGrocery = Grocery(
-        id: uuid.v4(),
-        name: _nameController.text,
-        quantity: int.parse(_quantityController.text),
-        category: _selectedCategory,
-      );
+      name: _nameController.text,
+      quantity: int.parse(_quantityController.text),
+      category: _selectedCategory,
+      id: '',
+    );
 
-      Navigator.pop<Grocery>(context, newGrocery);
-    }
+    Navigator.pop<Grocery>(context, newGrocery);
   }
 
   @override
